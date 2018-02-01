@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-sanitize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+
+</head>
+
+<body>
+	<div ng-app="markdownApp" ng-controller="markdownController">
+    
+    <h2>Markdown</h2>
+    <textarea ng-model="input" placeholder="Enter Markdown text here" autofocus="true"></textarea>
+    
+    <div ng-cloak ng-if="input.length > 0">
+        
+        <h2>Output</h2>
+        <!-- the "|" is a finter I am going to use in javascript -->
+        <div ng-bind-html="input | markdown" class="preview"></div>
+   
+    </div>
+</div>
+
+</body>
+
+</html>

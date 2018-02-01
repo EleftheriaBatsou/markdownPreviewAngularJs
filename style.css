@@ -1,0 +1,16 @@
+body {
+  background-color: #D9DACD;
+  padding: 1em;
+  font-family: "Helvetica Neue";
+}
+
+textarea {
+  width: 100%;
+  height: 15em;
+  padding: 0.5em;
+}
+
+.preview {
+  background: white;
+  padding: 0.5em;
+}
